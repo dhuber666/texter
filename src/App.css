@@ -1,3 +1,15 @@
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Rectangle 4: */
+background-image: linear-gradient(-180deg, #FE5F55 0%, #D8D8D8 100%);
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +37,89 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+
+
+.header {
+  display: flex;
+
+
+  align-items: center;
+  /* Rectangle 2: */
+  background: #FE5F55;
+  box-shadow: 0 7px 4px 0 rgba(0,0,0,0.50);
+  border-radius: 5px;
+  height: 141px;
+}
+
+
+
+.newNoteHeader {
+  /* Add Note: */
+  font-family: Palatino-Bold;
+  font-size: 36px;
+  color: #4A4A4A;
+  line-height: 34px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+  border-bottom: 5px solid #4A4A4A;
+  margin-left: 15px;
+  position: relative;
+  z-index: 3;
+  
+}
+
+.aside {
+  position: relative;
+  height: 100vh;
+  width: 254px;
+  /* Rectangle: */
+background: #F4F1DE;
+box-shadow: 7px 2px 4px 0 rgba(0,0,0,0.50);
+}
+
+.mainContent {
+  display: flex;
+  width: 100vw;
+}
+
+.notesList {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+.note {
+  /* Rectangle 3: */
+  background: #F4F1DE;
+  box-shadow: 0 2px 4px 3px rgba(0,0,0,0.50);
+  border-radius: 8px;
+  width: 300px;
+  height: 200px;
+  position: relative;
+}
+.controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+
+
+}
+.controls > p {
+  margin: 0 5px 2px 5px;
+}
+
+.newNoteHidden {
+  position: absolute;
+  top: 800px;
+  transition: 0.4s ease-in-out;
+  width: 100%;
+  height: 500px;
+  background: orange;
+  z-index: 1;
 }
