@@ -1,13 +1,15 @@
 import React from 'react';
-import Aside from './Aside';
+
 import NotesList from './NotesList';
 
 class Main extends React.Component {
     render() {
+
+
         return (
-            <div className='mainContent'>
-                <Aside newNoteToggle={this.props.noteToggle} />
-                <NotesList />
+            <div className='container'>
+
+                <NotesList notes={this.props.notes} handleDelete={this.props.handleDelete} handleEdit={this.props.handleEdit} />
             </div>
         )
     }
